@@ -60,10 +60,11 @@ public class TwoSum {
                 first=i;
                 temp2=sum-temp1;
                 for(int w=0;w<num.length;w++){
-                    if(num[w]==temp2)
-                        second=w;
+                    if(num[w]==temp2&&temp2!=temp1) {
+                        second = w;
+                        return 1;
+                    }
                 }
-                return 1;
                 }
         }
         return -1;
